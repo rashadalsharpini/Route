@@ -1,5 +1,4 @@
-﻿using System.Drawing;
-using ConsoleApp1;
+﻿using ConsoleApp1;
 //part 2
 //1
 foreach(string day in Enum.GetNames(typeof(weekday)))
