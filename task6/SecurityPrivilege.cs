@@ -5,5 +5,6 @@ public enum SecurityPrivilege
     Guest,
     Developer,
     Secretary,
-    DBA
+    DBA,
+    SecurityOfficer
 }

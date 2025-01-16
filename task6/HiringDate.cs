@@ -1,57 +1,21 @@
 namespace ConsoleApp1;
 
-// HiringDate class to represent the hiring date
-public class HiringDate
+public class HiringDate : IComparable<HiringDate>
 {
-    // Fields
-    private int _day;
-    private int _month;
-    private int _year;
-
-    // Properties with validation
-    public int Day
-    {
-        get { return _day; }
-        set
-        {
-            if (value < 1 || value > 31)
-                throw new ArgumentException("Day must be between 1 and 31.");
-            _day = value;
-        }
-    }
-
-    public int Month
-    {
-        get { return _month; }
-        set
-        {
-            if (value < 1 || value > 12)
-                throw new ArgumentException("Month must be between 1 and 12.");
-            _month = value;
-        }
-    }
-
-    public int Year
-    {
-        get { return _year; }
-        set
-        {
-            if (value < 1900 || value > DateTime.Now.Year)
-                throw new ArgumentException($"Year must be between 1900 and {DateTime.Now.Year}.");
-            _year = value;
-        }
-    }
+    // Properties
+    public int Day { get; private set; }
+    public int Month { get; private set; }
+    public int Year { get; private set; }
 
     // Constructor
     public HiringDate(int day, int month, int year)
     {
+        if (!IsValidDate(day, month, year))
+            throw new ArgumentException("Invalid date.");
+
         Day = day;
         Month = month;
         Year = year;
-
-        // Validate the date
-        if (!IsValidDate(day, month, year))
-            throw new ArgumentException("Invalid date.");
     }
 
     // Method to validate the date
@@ -67,10 +31,22 @@ public class HiringDate
             return false;
         }
     }
-
-    // Override ToString() to represent the hiring date in a readable format
     public override string ToString()
     {
         return $"{Day:D2}/{Month:D2}/{Year}"; // Format as DD/MM/YYYY
+    }
+
+    // Implement IComparable for sorting
+    public int CompareTo(HiringDate other)
+    {
+        if (other == null) return 1;
+
+        int yearComparison = Year.CompareTo(other.Year);
+        if (yearComparison != 0) return yearComparison;
+
+        int monthComparison = Month.CompareTo(other.Month);
+        if (monthComparison != 0) return monthComparison;
+
+        return Day.CompareTo(other.Day);
     }
 }
