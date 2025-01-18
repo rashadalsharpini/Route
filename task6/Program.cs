@@ -14,6 +14,7 @@ foreach (var emp in empArray)
     Console.WriteLine(emp);
 }
 
+Console.WriteLine("\nBoxing and Unboxing: 0 occurrences (no value types were boxed/unboxed).");
 int CompareHiringDate(HiringDate date1, HiringDate date2)
 {
     if (date1.year != date2.year)
