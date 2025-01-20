@@ -1,6 +1,6 @@
 ﻿IAuthenticationService AS = new BasicAuthenticationService();
-Console.WriteLine(AS.AuthenticateUser("admin", "admin") ? "Welcome Admin" : "Fuck You");
-Console.WriteLine(AS.AuthenticateUser("rashad", "WTF") ? "Welcome Admin" : "Fuck You");
+Console.WriteLine(AS.AuthenticateUser("admin", "admin") ? "Welcome Admin" : "wrong Authentication");
+Console.WriteLine(AS.AuthenticateUser("rashad", "not admin") ? "Welcome Admin" : "wrong Authentication");
 
 public interface IAuthenticationService
 {
