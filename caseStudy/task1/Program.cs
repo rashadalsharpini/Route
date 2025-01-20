@@ -11,7 +11,6 @@ double orderAmount = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine("Enter Order Type (Online/InStore):");
 string orderType = Console.ReadLine().ToLower();
 
-            // Create the order object
 Order order = new Order
 {
     orderId = orderId,
@@ -19,7 +18,6 @@ Order order = new Order
     orderAmount = (double)orderAmount
 };
 
-            // Assign the appropriate order processor
 if (orderType == "online")
 {
     order.orderProcessor = new OnlineOrderProcessor();
