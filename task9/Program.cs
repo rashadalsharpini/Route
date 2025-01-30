@@ -6,6 +6,9 @@ class Program
     {
         Duration d1 = new Duration(3660);
         Duration d2 = new Duration(3661);
+        Console.WriteLine(d1);
+        d1++;
+        Console.WriteLine(d1);
         // Console.WriteLine(d1+d2);
         // Console.WriteLine(d1+1);
         // Console.WriteLine(1+d1);

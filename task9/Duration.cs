@@ -80,11 +80,11 @@ public class Duration
 
     public static Duration operator ++(Duration d1)
     {
-        return new Duration(convert(d1)+60);
+        return d1 = new Duration(convert(d1) + 60);
     }
     public static Duration operator --(Duration d1)
     {
-        return new Duration(convert(d1)-60);
+        return d1 = new Duration(convert(d1)-60);
     }
 
     public static bool operator >(Duration d1, Duration d2)
