@@ -15,6 +15,8 @@ public class TrueFalse : Question
         {
             Console.WriteLine(ans);
         }
+        Console.WriteLine("1 for true - 0 for false");
+
     }
 
     public static TrueFalse addquestion()
@@ -25,7 +27,7 @@ public class TrueFalse : Question
         string body = Console.ReadLine();
         Console.WriteLine("enter mark");
         int mark = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("enter enter correct answer id 0 for false and 1 for true: ");
+        Console.WriteLine("enter correct answer id 0 for false and 1 for true: ");
         int ansid = Convert.ToInt32(Console.ReadLine());
         return new TrueFalse(header, body, mark, ansid);
     }

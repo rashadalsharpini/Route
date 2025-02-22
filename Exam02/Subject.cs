@@ -6,11 +6,10 @@ public class Subject
     public string SubjectName { get; set; }
     public Exam Exam { get; set; }
 
-    public Subject(int id, string name, Exam exam)
+    public Subject(int id, string name)
     {
         SubjectId = id;
         SubjectName = name;
-        Exam = exam;
     }
 
     public void createExam()
@@ -31,5 +30,10 @@ public class Subject
             Exam = new PracticalExam(time, number);
             Exam.CreateExam();
         }
+    }
+
+    public void printExam()
+    {
+        Exam.showexam();
     }
 }

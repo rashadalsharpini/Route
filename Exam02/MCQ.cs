@@ -14,6 +14,7 @@ public class MCQ : Question
         {
             Console.WriteLine(ans);
         }
+        Console.WriteLine("enter 1-2-3 is a choice");
     }
 
     public static MCQ addquestion()
@@ -28,13 +29,11 @@ public class MCQ : Question
         List<Answer> ans = new List<Answer>();
         for (int i = 0; i < 3; i++)
         {
-            Console.WriteLine("enter id: ");
-            int id = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("enter choose: ");
             string choose = Console.ReadLine();
-            ans.Add(new Answer(id, choose));
+            ans.Add(new Answer(i+1, choose));
         }
-        Console.WriteLine("enter enter correct answer id: ");
+        Console.WriteLine("enter correct answer id 1-2-3 is a choice: ");
         int ansid = Convert.ToInt32(Console.ReadLine());
         return new MCQ(header, body, mark, ansid, ans);
     }

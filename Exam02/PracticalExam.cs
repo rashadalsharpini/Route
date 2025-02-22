@@ -6,12 +6,20 @@ public class PracticalExam : Exam
 
     public override void showexam()
     {
+        int sum = 0, fullSum = 0;
         Console.WriteLine("Practical Exam");
         foreach (var q in Questions)
         {
+            fullSum += q.Mark;
             q.display();
-            Console.WriteLine($"Correct Answer:{q.CorrectAnswerId}");
+            int input = Convert.ToInt32(Console.ReadLine());
+            if (input == q.CorrectAnswerId)
+                sum += q.Mark;
+            else
+                Console.WriteLine("wrong answer"); 
         }
+        Console.WriteLine($"your degree = {sum} / {fullSum}");
+
     }
 
     public override void CreateExam()
