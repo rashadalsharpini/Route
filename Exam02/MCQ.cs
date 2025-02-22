@@ -31,8 +31,8 @@ public class MCQ : Question
             Console.WriteLine("enter id: ");
             int id = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("enter choose: ");
-            string question = Console.ReadLine();
-            ans.Add(new Answer(id, question));
+            string choose = Console.ReadLine();
+            ans.Add(new Answer(id, choose));
         }
         Console.WriteLine("enter enter correct answer id: ");
         int ansid = Convert.ToInt32(Console.ReadLine());
