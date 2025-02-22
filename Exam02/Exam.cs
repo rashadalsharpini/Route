@@ -14,5 +14,5 @@ public abstract class Exam
     }
 
     public abstract void CreateExam();
-    public abstract void showexam();
+    public abstract void Showexam();
 }

@@ -6,13 +6,13 @@ public class FinalExam : Exam
 {
     public FinalExam(int time, int numQuestions) : base(time, numQuestions){}
 
-    public override void showexam()
+    public override void Showexam()
     {
         int sum = 0, fullSum = 0;
         Console.WriteLine("Final Exam");
         foreach (var q in Questions)
         {
-            q.display();
+            q.Display();
             fullSum += q.Mark;
             int input = Convert.ToInt32(Console.ReadLine());
             if (input == q.CorrectAnswerId)
@@ -28,14 +28,14 @@ public class FinalExam : Exam
         Console.WriteLine("Final Exam");
         while (NumberOfQuestions!=0)
         {
-            Console.WriteLine("mcq1 / true-false2");
+            Console.Write("mcq1 / true-false2: ");
             int flag = Convert.ToInt32(Console.ReadLine());
             if (flag == 1)
             {
-                Questions.Add(MCQ.addquestion());
+                Questions.Add(Mcq.Addquestion());
             }else if (flag == 2)
             {
-                Questions.Add(TrueFalse.addquestion());
+                Questions.Add(TrueFalse.Addquestion());
             }
             NumberOfQuestions--;
         }

@@ -12,14 +12,14 @@ public class Subject
         SubjectName = name;
     }
 
-    public void createExam()
+    public void CreateExam()
     {
         Console.WriteLine("creating exam");
-        Console.WriteLine("final exam 1 - practical exam 2");
+        Console.Write("final exam 1 - practical exam 2: ");
         int option = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("enter time: ");
+        Console.Write("enter time: ");
         int time = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("enter number of questions: ");
+        Console.Write("enter number of questions: ");
         int number = Convert.ToInt32(Console.ReadLine());
         if (option == 1)
         {
@@ -32,8 +32,8 @@ public class Subject
         }
     }
 
-    public void printExam()
+    public void PrintExam()
     {
-        Exam.showexam();
+        Exam.Showexam();
     }
 }
