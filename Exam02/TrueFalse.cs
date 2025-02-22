@@ -2,18 +2,31 @@ namespace ConsoleApp2;
 
 public class TrueFalse : Question
 {
-    public TrueFalse(string header, string body, int mark):base(header, body, mark)
+    public TrueFalse(string header, string body, int mark, int correctAnswerId):base(header, body, mark, correctAnswerId)
     {
-        answers.Add(new Answer(1, "True"));
-        answers.Add(new Answer(2, "False"));
+        choices.Add(new Answer(1, "True"));
+        choices.Add(new Answer(2, "False"));
     }
 
     public override void display()
     {
         Console.WriteLine($"{Header}, {Body}, {Mark}");
-        foreach (var ans in answers)
+        foreach (var ans in choices)
         {
             Console.WriteLine(ans);
         }
+    }
+
+    public static TrueFalse addquestion()
+    {
+        Console.WriteLine("enter header");
+        string header = Console.ReadLine();
+        Console.WriteLine("enter body");
+        string body = Console.ReadLine();
+        Console.WriteLine("enter mark");
+        int mark = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("enter enter correct answer id 0 for false and 1 for true: ");
+        int ansid = Convert.ToInt32(Console.ReadLine());
+        return new TrueFalse(header, body, mark, ansid);
     }
 }

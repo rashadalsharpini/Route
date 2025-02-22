@@ -13,4 +13,14 @@ public class PracticalExam : Exam
             Console.WriteLine($"Correct Answer:{q.CorrectAnswerId}");
         }
     }
+
+    public override void CreateExam()
+    {
+        Console.WriteLine("Practical Exam");
+        while (NumberOfQuestions!=0)
+        {
+            Questions.Add(MCQ.addquestion());
+            NumberOfQuestions--;
+        }
+    }
 }

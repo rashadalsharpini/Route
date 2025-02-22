@@ -5,14 +5,15 @@ public abstract class Question
     public string Header { get; set; }
     public string Body { get; set; }
     public double Mark { get; set; }
-    public List<Answer> answers { get; set; } = new();
+    public List<Answer> choices { get; set; } = new();
     public int CorrectAnswerId { get; set; }
 
-    public Question(string header, string body, double mark)
+    public Question(string header, string body, double mark, int correctAnswerId)
     {
         Header = header;
         Body = body;
         Mark = mark;
+        CorrectAnswerId = correctAnswerId;
     }
 
     public abstract void display();

@@ -13,5 +13,6 @@ public abstract class Exam
         Questions = new List<Question>();
     }
 
+    public abstract void CreateExam();
     public abstract void showexam();
 }
