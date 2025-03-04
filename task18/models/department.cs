@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ConsoleApp2.models;
+namespace ConsoleApp1.models;
 
 public class department
 {
@@ -12,4 +12,5 @@ public class department
     public int inst_id { get; set; }
     [DataType(DataType.Date)]
     public DateTime HiringDate {get;set;}
+
 }

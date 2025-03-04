@@ -1,6 +1,4 @@
-using System.ComponentModel.DataAnnotations;
-
-namespace ConsoleApp2.models;
+namespace ConsoleApp1.models;
 
 public class student
 {
@@ -10,4 +8,8 @@ public class student
     public string address { get; set; }
     public int age { get; set; }
     public int department_id { get; set; }
+    public override string ToString()
+    {
+        return $"{fname} {lname} {address} {age} {department_id} {id}";
+    }
 }

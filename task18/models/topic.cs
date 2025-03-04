@@ -1,6 +1,4 @@
-using Microsoft.EntityFrameworkCore;
-
-namespace ConsoleApp2.models;
+namespace ConsoleApp1.models;
 
 public class topic
 {

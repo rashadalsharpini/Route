@@ -1,5 +1,4 @@
-
-namespace ConsoleApp2.models;
+namespace ConsoleApp1.models;
 
 public class course
 {
@@ -8,4 +7,5 @@ public class course
     public string name { get; set; }
     public string? description { get; set; }
     public int top_id { get; set; }
+
 }

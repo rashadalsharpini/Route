@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace ConsoleApp2.Migrations
+namespace ConsoleApp1.Migrations
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration
@@ -94,8 +94,8 @@ namespace ConsoleApp2.Migrations
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    fname = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    lname = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    fname = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false),
+                    lname = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false),
                     address = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     age = table.Column<int>(type: "int", nullable: false),
                     department_id = table.Column<int>(type: "int", nullable: false)

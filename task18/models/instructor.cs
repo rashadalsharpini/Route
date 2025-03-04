@@ -1,4 +1,4 @@
-namespace ConsoleApp2.models;
+namespace ConsoleApp1.models;
 
 public class instructor
 {
@@ -9,4 +9,5 @@ public class instructor
     public string Address { get; set; }
     public decimal HourRate { get; set; }
     public int DepartmentID { get; set; }
+
 }
