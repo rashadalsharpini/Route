@@ -2,7 +2,7 @@ using ConsoleApp1.DbContexts;
 
 namespace ConsoleApp1;
 // i don't know if this class is good practise or not
-// it's just and idea i had
+// it's just an idea i had
 public class CRUDOperations<T> where T : class
 {
     public void Add(ITIDbContext db, T entity)
