@@ -1,0 +1,17 @@
+/home/rashad/Desktop/rider/Demo2/BusinessLogic/bin/Debug/net8.0/BusinessLogic.deps.json
+/home/rashad/Desktop/rider/Demo2/BusinessLogic/bin/Debug/net8.0/BusinessLogic.dll
+/home/rashad/Desktop/rider/Demo2/BusinessLogic/bin/Debug/net8.0/BusinessLogic.pdb
+/home/rashad/Desktop/rider/Demo2/BusinessLogic/bin/Debug/net8.0/Data.dll
+/home/rashad/Desktop/rider/Demo2/BusinessLogic/bin/Debug/net8.0/Data.pdb
+/home/rashad/Desktop/rider/Demo2/BusinessLogic/obj/Debug/net8.0/BusinessLogic.csproj.AssemblyReference.cache
+/home/rashad/Desktop/rider/Demo2/BusinessLogic/obj/Debug/net8.0/BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+/home/rashad/Desktop/rider/Demo2/BusinessLogic/obj/Debug/net8.0/BusinessLogic.AssemblyInfoInputs.cache
+/home/rashad/Desktop/rider/Demo2/BusinessLogic/obj/Debug/net8.0/BusinessLogic.AssemblyInfo.cs
+/home/rashad/Desktop/rider/Demo2/BusinessLogic/obj/Debug/net8.0/BusinessLogic.csproj.CoreCompileInputs.cache
+/home/rashad/Desktop/rider/Demo2/BusinessLogic/obj/Debug/net8.0/BusinessLogic.csproj.CopyComplete
+/home/rashad/Desktop/rider/Demo2/BusinessLogic/obj/Debug/net8.0/BusinessLogic.dll
+/home/rashad/Desktop/rider/Demo2/BusinessLogic/obj/Debug/net8.0/refint/BusinessLogic.dll
+/home/rashad/Desktop/rider/Demo2/BusinessLogic/obj/Debug/net8.0/BusinessLogic.pdb
+/home/rashad/Desktop/rider/Demo2/BusinessLogic/obj/Debug/net8.0/ref/BusinessLogic.dll
+/home/rashad/Desktop/rider/Demo2/BusinessLogic/bin/Debug/net8.0/Repos.dll
+/home/rashad/Desktop/rider/Demo2/BusinessLogic/bin/Debug/net8.0/Repos.pdb

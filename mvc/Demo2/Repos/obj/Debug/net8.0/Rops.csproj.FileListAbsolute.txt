@@ -1,0 +1,17 @@
+/home/rashad/Desktop/rider/Demo2/Rops/bin/Debug/net8.0/Rops.deps.json
+/home/rashad/Desktop/rider/Demo2/Rops/bin/Debug/net8.0/Rops.runtimeconfig.json
+/home/rashad/Desktop/rider/Demo2/Rops/bin/Debug/net8.0/Rops.dll
+/home/rashad/Desktop/rider/Demo2/Rops/bin/Debug/net8.0/Rops.pdb
+/home/rashad/Desktop/rider/Demo2/Rops/bin/Debug/net8.0/Data.dll
+/home/rashad/Desktop/rider/Demo2/Rops/bin/Debug/net8.0/Data.pdb
+/home/rashad/Desktop/rider/Demo2/Rops/obj/Debug/net8.0/Rops.csproj.AssemblyReference.cache
+/home/rashad/Desktop/rider/Demo2/Rops/obj/Debug/net8.0/Rops.GeneratedMSBuildEditorConfig.editorconfig
+/home/rashad/Desktop/rider/Demo2/Rops/obj/Debug/net8.0/Rops.AssemblyInfoInputs.cache
+/home/rashad/Desktop/rider/Demo2/Rops/obj/Debug/net8.0/Rops.AssemblyInfo.cs
+/home/rashad/Desktop/rider/Demo2/Rops/obj/Debug/net8.0/Rops.csproj.CoreCompileInputs.cache
+/home/rashad/Desktop/rider/Demo2/Rops/obj/Debug/net8.0/Rops.csproj.CopyComplete
+/home/rashad/Desktop/rider/Demo2/Rops/obj/Debug/net8.0/Rops.dll
+/home/rashad/Desktop/rider/Demo2/Rops/obj/Debug/net8.0/refint/Rops.dll
+/home/rashad/Desktop/rider/Demo2/Rops/obj/Debug/net8.0/Rops.pdb
+/home/rashad/Desktop/rider/Demo2/Rops/obj/Debug/net8.0/Rops.genruntimeconfig.cache
+/home/rashad/Desktop/rider/Demo2/Rops/obj/Debug/net8.0/ref/Rops.dll
