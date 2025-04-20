@@ -19,6 +19,7 @@ public class AddEmployee
     public bool IsActive { get; set; }
     public double Salary { get; set; }
     [Required(ErrorMessage = "Email is required")]
+    
     public string Email { get; set; } = null!;
     [Display(Name = "Phone number")]
     [Required(ErrorMessage = "Phone number is required")]
@@ -30,4 +31,5 @@ public class AddEmployee
     public EmployeeType Type { get; set; }
     public int CreatedBy { get; set; }
     public int LastModifiedBy { get; set; }
+    public int? DepartmentId { get; set; }
 }

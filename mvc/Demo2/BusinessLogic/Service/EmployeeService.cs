@@ -7,40 +7,45 @@ using Repos.Interfaces;
 
 namespace BusinessLogic.Service;
 
-public class EmployeeService(IEmployeeRepo _employeeRepo, IMapper mapper) :  IEmployeeService
+public class EmployeeService(IUnitOfWork uow, IMapper mapper) :  IEmployeeService
 {
     public EmployeeGetById GetById(int? id)
     {
         if (id == null) return null;
         // var e = _employeeRepo.Getbyid(id.Value).ToGI();
-        var e = mapper.Map<Employee, EmployeeGetById>(_employeeRepo.Getbyid(id.Value));
+        var e = mapper.Map<Employee, EmployeeGetById>(uow.EmployeeRepo.Getbyid(id.Value));
         return e is null ? null : e;
     }
 
-    public IEnumerable<EmployeeGetAll> GetAll(bool tracking = false)
+    public IEnumerable<EmployeeGetAll> GetAll(string? employeeSearchName, bool tracking = false)
     {
-        // return _employeeRepo.Getall().Select(e => e.ToGA());
-        // src=>dest
-        //emp=>empgetall
-        return mapper.Map<IEnumerable<Employee>, IEnumerable<EmployeeGetAll>>(_employeeRepo.Getall());
+        IEnumerable<Employee> employess;
+        if (string.IsNullOrWhiteSpace(employeeSearchName))
+            employess = uow.EmployeeRepo.Getall();
+        else employess = uow.EmployeeRepo.Getall(e => e.Name.ToLower().Contains(employeeSearchName.ToLower()));
+        return mapper.Map<IEnumerable<Employee>, IEnumerable<EmployeeGetAll>>(employess);
     }
 
     public int Add(AddEmployee entity)
     {
-        return _employeeRepo.Add(mapper.Map<AddEmployee, Employee>(entity));
+        uow.EmployeeRepo.Add(mapper.Map<AddEmployee, Employee>(entity)); // done local didn't effect db yet
+        // do your logic
+        return uow.Save();
     }
-
+    
     public int Update(UpdateEmployee entity)
     {
-        return _employeeRepo.Update(mapper.Map<UpdateEmployee, Employee>(entity));
+        uow.EmployeeRepo.Update(mapper.Map<UpdateEmployee, Employee>(entity));
+        return uow.Save();
     }
 
     public bool Delete(int id)
     { // soft delete
-        var e = _employeeRepo.Getbyid(id);
+        var e = uow.EmployeeRepo.Getbyid(id);
         if (e is null) return false;
         e.IsDeleted = true;
-        return _employeeRepo.Update(e) > 0;
+        uow.EmployeeRepo.Update(e);
+        return uow.Save() > 0;
     }
 
     public Employee GetByName(string name)

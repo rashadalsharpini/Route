@@ -1,17 +1,29 @@
 @using Microsoft.AspNetCore.Mvc.TagHelpers
 @model IEnumerable<DepartmentDto>
-<!DOCTYPE html>
+@{
+    Layout = "_Layout";
+}
+@if (!string.IsNullOrWhiteSpace(TempData["message"] as string))
+{
+    <div aria-live="polite" aria-atomic="true" class="toast-container position-fixed p-3" style="bottom: 25px; right:25px; z-index: 100;">
+        <div class="toast fade show " role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto text-success">Success!!</strong>
+                <small>Just now</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                @TempData["Message"]
+            </div>
+        </div>
+    </div>
+}
 
-<html>
-<head>
-    <title>Department</title>
-</head>
-<body>
+<div class="container">
 <div style="text-align: center;">
     <h1>Department</h1>
 </div>
-</body>
-</html>
+</div>
 
 <a asp-controller="Department" asp-action="Create" class="btn btn-primary"> Create New Department</a>
 <br/>
@@ -34,16 +46,9 @@
                 <td>@department.Name</td>
                 <td>@department.Description</td>
                 <td>@department.CreatedOn</td>
-                <td>
-                    <a asp-action="Details" asp-route-id="@department.Id" class="btn btn-primary">
-                        <i class="fas fa-eye"></i> Details
-                    </a>
-                </td>
-                <td>
-                    <a asp-action="Update" asp-route-id="@department.Id" class="btn btn-success">
-                        <i class="fas fa-edit"></i> Update
-                    </a>
-                </td>
+                
+                
+                <partial name="_Buttons", model="department.Id"/>
                 <td>
                     <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#DeleteModal-@department.Id">
                         <i class="fas fa-trash"></i> Delete
@@ -80,3 +85,8 @@ else
         <h2>No Departments Found !!</h2>
     </div>
 }
+
+
+
+
+

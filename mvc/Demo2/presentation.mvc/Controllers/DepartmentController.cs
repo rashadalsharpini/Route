@@ -14,6 +14,8 @@ public class DepartmentController(IDepartmentService departmentService
     [HttpGet]
     public IActionResult Index()
     {
+        // ViewData["Message"] = "from view data";
+        // ViewBag.message = "from view bag";
         return View(departmentService.GetAll());
     }
     [HttpGet]
@@ -23,16 +25,23 @@ public class DepartmentController(IDepartmentService departmentService
     }
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public IActionResult Create(CreatedDepartmentDto department)
+    public IActionResult Create(DepartmentViewModel department)
     {
         if (ModelState.IsValid)
         {
             try
             {
-                int res = departmentService.Add(department);
-                if (res > 0)
-                    return RedirectToAction(nameof(Index));
-                ModelState.AddModelError(string.Empty, "department Can't be created");
+                var departmentDto = new CreatedDepartmentDto()
+                {
+                    Code = department.Code,
+                    Description = department.Description,
+                    Name = department.Name,
+                    CreatedOn = department.CreatedOn
+                };
+                int res = departmentService.Add(departmentDto);
+                string message = res > 0 ? "department is created" : "department can't be created";
+                TempData["message"] = message;
+                return RedirectToAction(nameof(Index));
             }
             catch (Exception ex)
             {
@@ -62,7 +71,7 @@ public class DepartmentController(IDepartmentService departmentService
         if (!id.HasValue) return BadRequest();
         var department = departmentService.GetById(id.Value);
         if (department is null) return View("NotFound");
-        var dvm = new DepartmentEditViewModel()
+        var dvm = new DepartmentViewModel()
         {
             Code = department.Code,
             Description = department.Description,
@@ -74,7 +83,7 @@ public class DepartmentController(IDepartmentService departmentService
     }
 
     [HttpPost]
-    public IActionResult Update([FromRoute]int id, DepartmentEditViewModel viewModel)
+    public IActionResult Update([FromRoute]int id, DepartmentViewModel viewModel)
     {
         if (ModelState.IsValid)
         {

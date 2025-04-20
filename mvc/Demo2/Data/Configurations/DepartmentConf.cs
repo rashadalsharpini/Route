@@ -11,6 +11,9 @@ public class DepartmentConf : BaseEntityConf<Department>, IEntityTypeConfigurati
         builder.Property(d => d.Code).HasColumnType("varchar(20)").IsRequired();
         // builder.HasIndex(d => d.Code).IsUnique();
         builder.HasQueryFilter(d => !d.IsDeleted);
+        builder.HasMany(d=>d.Employees).WithOne(e=>e.Department)
+            .HasForeignKey(e=>e.DepartmentId)
+            .OnDelete(DeleteBehavior.SetNull);
         base.Configure(builder);
     }
 }

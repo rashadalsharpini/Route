@@ -20,15 +20,17 @@ public class Program
 
         // Add services to the container.
         builder.Services.AddControllersWithViews();
-        builder.Services.AddScoped<IDepartmentRepo, DepartmentRepo>();
+        // builder.Services.AddScoped<IDepartmentRepo, DepartmentRepo>();
         builder.Services.AddScoped<IDepartmentService, DepartmentService>();
-        builder.Services.AddScoped<IEmployeeRepo, EmployeeRepo>();
+        // builder.Services.AddScoped<IEmployeeRepo, EmployeeRepo>();
         builder.Services.AddScoped<IEmployeeService, EmployeeService>();
+        builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
         // builder.Services.AddAutoMapper(typeof(MappingProfiles).Assembly);
         builder.Services.AddAutoMapper(m=>m.AddProfile(new MappingProfiles()));
         builder.Services.AddDbContext<AppDbContext>(options =>
         {
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+            options.UseLazyLoadingProxies();
         });
 
         var app = builder.Build();

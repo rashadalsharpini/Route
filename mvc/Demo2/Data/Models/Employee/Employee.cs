@@ -16,6 +16,6 @@ public class Employee : BaseEntity
     public EmployeeType Type { get; set; }
     public bool IsActive { get; set; }
     
-    public Department.Department Department { get; set; }
     public int? DepartmentId { get; set; }
+    public virtual Department.Department Department { get; set; }
 }

@@ -17,4 +17,6 @@ public class EmployeeGetAll
     public string EmpGender { get; set; }
     [Display(Name = "Employee Type")]
     public string EmpType { get; set; }
+    public int? DepartmentId { get; set; }
+    public string? DepartmentName { get; set; }
 }

@@ -20,4 +20,6 @@ public class EmployeeGetById
     public DateTime CreatedOn { get; set; }
     public string LastModifiedBy { get; set; } = string.Empty;
     public DateTime LastModifiedOn { get; set; }
+    public int? DepartmentId { get; set; }
+    public string? DepartmentName { get; set; }
 }

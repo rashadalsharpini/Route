@@ -148,3 +148,5 @@
 /home/rashad/Desktop/rider/Demo2/presentation.mvc/bin/Debug/net8.0/Repos.dll
 /home/rashad/Desktop/rider/Demo2/presentation.mvc/bin/Debug/net8.0/Repos.pdb
 /home/rashad/Desktop/rider/Demo2/presentation.mvc/bin/Debug/net8.0/AutoMapper.dll
+/home/rashad/Desktop/rider/Demo2/presentation.mvc/bin/Debug/net8.0/Castle.Core.dll
+/home/rashad/Desktop/rider/Demo2/presentation.mvc/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Proxies.dll

@@ -145,7 +145,8 @@ namespace Data.Migrations
                 {
                     b.HasOne("Data.Models.Department.Department", "Department")
                         .WithMany("Employees")
-                        .HasForeignKey("DepartmentId");
+                        .HasForeignKey("DepartmentId")
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.Navigation("Department");
                 });

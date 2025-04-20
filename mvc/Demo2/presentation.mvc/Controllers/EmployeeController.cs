@@ -4,24 +4,45 @@ using Data.Models.Employee;
 using Data.Models.Shared.Enums;
 using Microsoft.AspNetCore.Mvc;
 using presentation.mvc.Controllers;
+using presentation.mvc.Models.EmployeeViewModel;
 
 public class EmployeeController(IEmployeeService employeeService,ILogger<DepartmentController> logger
     ,IWebHostEnvironment environment) : Controller
 {
     [HttpGet]
-    public IActionResult Index() => View(employeeService.GetAll());
+    public IActionResult Index(string? employeeSearchName)
+    {
+        return View(employeeService.GetAll(employeeSearchName));
+    }
 
     [HttpGet]
-    public IActionResult Create() => View();
+    public IActionResult Create()
+    {
+        return View();
+    } 
 
     [HttpPost]
-    public IActionResult Create(AddEmployee employee)
+    public IActionResult Create(EmployeeViewModel employee)
     {
         if (ModelState.IsValid)
         {
             try
             {
-                int res = employeeService.Add(employee);
+                var employeeDto = new AddEmployee()
+                {
+                    Address = employee.Address,
+                    Age = employee.Age,
+                    Email = employee.Email,
+                    Gender = employee.Gender,
+                    HireDate = employee.HireDate,
+                    IsActive = employee.IsActive,
+                    Name = employee.Name,
+                    Phone = employee.Phone,
+                    Salary = employee.Salary,
+                    Type = employee.Type,
+                    DepartmentId = employee.DepartmentId,
+                };
+                int res = employeeService.Add(employeeDto);
                 if (res > 0)
                     return RedirectToAction(nameof(Index));
                 ModelState.AddModelError(string.Empty, "department Can't be created");
@@ -55,8 +76,8 @@ public class EmployeeController(IEmployeeService employeeService,ILogger<Departm
         if(!id.HasValue) return BadRequest();
         var employee = employeeService.GetById(id.Value);
         if (employee is null) return NotFound();
-        var empDto = new UpdateEmployee() {
-            Id = employee.Id,
+        var empvm = new EmployeeViewModel() {
+            // Id = employee.Id,
             Name = employee.Name,
             Phone = employee.Phone,
             HireDate = employee.HireDate,
@@ -67,33 +88,48 @@ public class EmployeeController(IEmployeeService employeeService,ILogger<Departm
             Address = employee.Address,
             IsActive = employee.IsActive,
             Email = employee.Email,
-            
+            DepartmentId = employee.DepartmentId,
         };
-        return View(empDto);
+        return View(empvm);
     }
     [HttpPost]
-    public IActionResult Update([FromRoute]int? id, UpdateEmployee empDto)
+    public IActionResult Update([FromRoute]int? id, EmployeeViewModel empvm)
     {
-        if(!id.HasValue || id != empDto.Id) return BadRequest();
-        if (!ModelState.IsValid) return View(empDto);
+        if(!id.HasValue) return BadRequest();
+        if (!ModelState.IsValid) return View(empvm);
         try
         {
+            var empDto = new UpdateEmployee()
+            {
+                Id = id.Value,
+                Name = empvm.Name,
+                Phone = empvm.Phone,
+                HireDate = empvm.HireDate,
+                Gender = empvm.Gender,
+                Type = empvm.Type,
+                Age = empvm.Age,
+                Salary = empvm.Salary,
+                Address = empvm.Address,
+                IsActive = empvm.IsActive,
+                Email = empvm.Email,
+                DepartmentId = empvm.DepartmentId,
+            };
             var res = employeeService.Update(empDto);
             if(res > 0) return RedirectToAction(nameof(Index));
             ModelState.AddModelError(string.Empty, "not updated");
-            return View(empDto);
+            return View(empvm);
         }
         catch (Exception ex)
         {
             if(environment.IsDevelopment())
             {
                 ModelState.AddModelError(string.Empty,ex.Message);
-                return View(empDto);
+                return View(empvm);
             }
             logger.LogError(ex.Message);
             // return View("Error", ex);
         }
-        return View(empDto);
+        return View(empvm);
     }
     [HttpPost]
     public IActionResult Delete(int id)
