@@ -15,7 +15,7 @@
 <div class="m-2">
     <form asp-action="index" class="row offset-2"  method="get">
         <div class="col-8">
-            <input  class="form-control" type="text" name="EmployeeSearchName" placeholder="Search Employee By Name"/>
+            <input id="searchBox" class="form-control" type="text" name="EmployeeSearchName" placeholder="Search Employee By Name"/>
         </div>
         <div class="col-4">
             <input  type="submit" class="btn btn-outline-success" value="Search"/>
@@ -49,7 +49,7 @@
             <th>Delete</th>
         </tr>
         </thead>
-        <tbody class="text-center">
+        <tbody class="text-center" id="employeeTable">
         @foreach (var employee in Model)
         {
             <tr>
@@ -100,6 +100,30 @@
         }
         </tbody>
     </table>
+    
+    <script>
+    const searchBox = document.getElementById('searchBox');
+    const tableBody = document.getElementById('employeeTable');
+
+    searchBox.addEventListener('input', function () {
+        const query = this.value;
+
+        fetch(`@Url.Action("Index", "Employee")?employeeSearchName=${encodeURIComponent(query)}`, {
+            headers: {
+                "X-Requested-With": "XMLHttpRequest"
+            }
+        })
+        .then(res => res.text())
+        .then(html => {
+            // Extract the new rows from the returned HTML
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, "text/html");
+            const newRows = doc.querySelector("#employeeTable").innerHTML;
+
+            tableBody.innerHTML = newRows;
+        });
+    });
+</script>
 }
 else
 {
