@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets/presentation.mvc.bundle.scp.css"
     },
     {
+      "Id": "/home/rashad/Desktop/rider/Demo2/presentation.mvc/wwwroot/Files/Images/9d7b34dc-f28f-4adb-b740-85947398189a_vinland.png",
+      "PackagePath": "staticwebassets/Files/Images/9d7b34dc-f28f-4adb-b740-85947398189a_vinland.png"
+    },
+    {
+      "Id": "/home/rashad/Desktop/rider/Demo2/presentation.mvc/wwwroot/Files/Images/placeholder.png",
+      "PackagePath": "staticwebassets/Files/Images/placeholder.png"
+    },
+    {
       "Id": "/home/rashad/Desktop/rider/Demo2/presentation.mvc/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },

@@ -1,3 +1,4 @@
+using Data.Models.Shared;
 using Data.Models.Shared.Enums;
 
 namespace Data.Models.Employee;
@@ -15,6 +16,7 @@ public class Employee : BaseEntity
     public Gender Gender { get; set; }
     public EmployeeType Type { get; set; }
     public bool IsActive { get; set; }
+    public string? ImageName { get; set; }
     
     public int? DepartmentId { get; set; }
     public virtual Department.Department Department { get; set; }

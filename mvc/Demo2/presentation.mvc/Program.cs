@@ -1,6 +1,7 @@
-using BusinessLogic.Interfaces;
 using BusinessLogic.Profiles;
-using BusinessLogic.Service;
+using BusinessLogic.Services.AttachementService;
+using BusinessLogic.Services.classes;
+using BusinessLogic.Services.Interfaces;
 using Data.Contexts;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -25,6 +26,7 @@ public class Program
         // builder.Services.AddScoped<IEmployeeRepo, EmployeeRepo>();
         builder.Services.AddScoped<IEmployeeService, EmployeeService>();
         builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+        builder.Services.AddScoped<IAttachementService, AttachementService>();
         // builder.Services.AddAutoMapper(typeof(MappingProfiles).Assembly);
         builder.Services.AddAutoMapper(m=>m.AddProfile(new MappingProfiles()));
         builder.Services.AddDbContext<AppDbContext>(options =>

@@ -1,10 +1,11 @@
 using BusinessLogic.DataTransferObjects.EmployeeDtos;
-using BusinessLogic.Interfaces;
+using BusinessLogic.Services.Interfaces;
 using Data.Models.Employee;
 using Data.Models.Shared.Enums;
 using Microsoft.AspNetCore.Mvc;
-using presentation.mvc.Controllers;
 using presentation.mvc.Models.EmployeeViewModel;
+
+namespace presentation.mvc.Controllers;
 
 public class EmployeeController(IEmployeeService employeeService,ILogger<DepartmentController> logger
     ,IWebHostEnvironment environment) : Controller
@@ -41,6 +42,7 @@ public class EmployeeController(IEmployeeService employeeService,ILogger<Departm
                     Salary = employee.Salary,
                     Type = employee.Type,
                     DepartmentId = employee.DepartmentId,
+                    Image = employee.Image,
                 };
                 int res = employeeService.Add(employeeDto);
                 if (res > 0)

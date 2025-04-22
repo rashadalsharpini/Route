@@ -1,6 +1,7 @@
 using System.Linq.Expressions;
 using Data.Contexts;
 using Data.Models;
+using Data.Models.Shared;
 using Microsoft.EntityFrameworkCore;
 using Repos.Interfaces;
 

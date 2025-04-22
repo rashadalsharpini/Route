@@ -1,5 +1,6 @@
 using BusinessLogic.DataTransferObjects;
-using BusinessLogic.Interfaces;
+using BusinessLogic.DataTransferObjects.DepartmentDtos;
+using BusinessLogic.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;

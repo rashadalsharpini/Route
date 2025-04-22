@@ -8,8 +8,10 @@ namespace Repos.Repos;
 
 public class DepartmentRepo(AppDbContext db) : GenericRepo<Department>(db), IDepartmentRepo
 {
+    private readonly AppDbContext _db = db;
+
     public bool ExistByCode(string code)
     {
-        return db.Departments.Any(d => d.Code == code && !d.IsDeleted);
+        return _db.Departments.Any(d => d.Code == code && !d.IsDeleted);
     }
 }

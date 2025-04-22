@@ -1,3 +1,5 @@
+using Data.Models.Shared;
+
 namespace Data.Models.Department;
 
 public class Department : BaseEntity

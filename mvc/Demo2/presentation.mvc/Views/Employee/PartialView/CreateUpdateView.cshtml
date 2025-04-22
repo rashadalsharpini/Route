@@ -1,5 +1,5 @@
-@using System.Collections
-@using BusinessLogic.Interfaces
+@using BusinessLogic.DataTransferObjects.DepartmentDtos
+@using BusinessLogic.Services.Interfaces
 @using Data.Models.Employee
 @using Data.Models.Shared.Enums
 @inject IDepartmentService DepartmentService
@@ -13,6 +13,14 @@
     <input asp-for="Name" class="form-control" />
     <span asp-validation-for="Name" class="text-danger"></span>
 </div>
+
+<div class="form-group mb-3 col-6">
+    <label class="form-label" asp-for="Image"></label>
+    <input asp-for="Image" class="form-control" />
+    <span asp-validation-for="Image" class="text-danger"></span>
+</div>
+
+
 <div class="form-group mb-3 col-6">
     <label class="form-label" asp-for="Email"></label>
     <input asp-for="Email" class="form-control" />

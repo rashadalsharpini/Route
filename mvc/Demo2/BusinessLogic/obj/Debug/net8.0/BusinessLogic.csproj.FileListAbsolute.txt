@@ -15,3 +15,13 @@
 /home/rashad/Desktop/rider/Demo2/BusinessLogic/obj/Debug/net8.0/ref/BusinessLogic.dll
 /home/rashad/Desktop/rider/Demo2/BusinessLogic/bin/Debug/net8.0/Repos.dll
 /home/rashad/Desktop/rider/Demo2/BusinessLogic/bin/Debug/net8.0/Repos.pdb
+/home/rashad/Desktop/rider/Demo2/BusinessLogic/bin/Debug/net8.0/Microsoft.AspNetCore.Http.Features.dll
+/home/rashad/Desktop/rider/Demo2/BusinessLogic/bin/Debug/net8.0/Microsoft.Net.Http.Headers.dll
+/home/rashad/Desktop/rider/Demo2/BusinessLogic/bin/Debug/net8.0/System.IO.Pipelines.dll
+/home/rashad/Desktop/rider/Demo2/BusinessLogic/bin/Debug/net8.0/Microsoft.AspNetCore.Connections.Abstractions.dll
+/home/rashad/Desktop/rider/Demo2/BusinessLogic/bin/Debug/net8.0/Microsoft.Extensions.Features.dll
+/home/rashad/Desktop/rider/Demo2/BusinessLogic/bin/Debug/net8.0/Microsoft.AspNetCore.Http.Features.xml
+/home/rashad/Desktop/rider/Demo2/BusinessLogic/bin/Debug/net8.0/Microsoft.Net.Http.Headers.xml
+/home/rashad/Desktop/rider/Demo2/BusinessLogic/bin/Debug/net8.0/System.IO.Pipelines.xml
+/home/rashad/Desktop/rider/Demo2/BusinessLogic/bin/Debug/net8.0/Microsoft.AspNetCore.Connections.Abstractions.xml
+/home/rashad/Desktop/rider/Demo2/BusinessLogic/bin/Debug/net8.0/Microsoft.Extensions.Features.xml

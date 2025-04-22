@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace BusinessLogic.DataTransferObjects;
+namespace BusinessLogic.DataTransferObjects.DepartmentDtos;
 
 public class CreatedDepartmentDto
 {

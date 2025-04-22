@@ -32,4 +32,5 @@ public class EmployeeViewModel
     public int LastModifiedBy { get; set; }
     [Display(Name = "Department")]
     public int? DepartmentId { get; set; }
+    public IFormFile? Image { get; set; }
 }

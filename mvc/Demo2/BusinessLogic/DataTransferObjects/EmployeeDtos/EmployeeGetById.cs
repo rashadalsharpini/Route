@@ -22,4 +22,5 @@ public class EmployeeGetById
     public DateTime LastModifiedOn { get; set; }
     public int? DepartmentId { get; set; }
     public string? DepartmentName { get; set; }
+    public string? Image { get; set; }
 }

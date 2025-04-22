@@ -6,6 +6,16 @@
 }
 
 <h1 class="my-5 w-75">Employee Details</h1>
+
+<div class="text-center">
+    <img class="rounded-circle"
+         src="@(string.IsNullOrEmpty(Model.Image) 
+                  ? Url.Content("~/Files/Images/placeholder.png") 
+                  : Url.Content("~/Files/Images/" + Model.Image))"
+         style="width: 150px; height: 150px; object-fit: cover;" />
+</div>
+
+
 <ul class="nav nav-tabs" id="employeeTabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active" id="general-tab" data-bs-toggle="tab" href="#general" role="tab" aria-controls="general" aria-selected="true">General</a>

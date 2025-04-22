@@ -1,3 +1,5 @@
+using Data.Models.Shared;
+
 namespace Data.Configurations;
 
 public class BaseEntityConf<T>:IEntityTypeConfiguration<T> where T:BaseEntity

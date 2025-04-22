@@ -1,4 +1,4 @@
-namespace BusinessLogic.DataTransferObjects;
+namespace BusinessLogic.DataTransferObjects.DepartmentDtos;
 
 public class DepartmentDto
 {

@@ -1,4 +1,5 @@
 using BusinessLogic.DataTransferObjects;
+using BusinessLogic.DataTransferObjects.DepartmentDtos;
 using Data.Models;
 using Data.Models.Department;
 
