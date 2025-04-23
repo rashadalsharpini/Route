@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "lVPhK3EV6zAyXLCHIJ+xiCKhcAVxyT+CCXuSHpfAB9w=",
+  "Hash": "AXi/W47ssBIrVsyWD+546h6/0FnV4gX4GZnVH46KFuU=",
   "Source": "presentation.mvc",
   "BasePath": "_content/presentation.mvc",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/home/rashad/Desktop/rider/Demo2/presentation.mvc/obj/Debug/net8.0/scopedcss/projectbundle/presentation.mvc.bundle.scp.css"
+    },
+    {
+      "Identity": "/home/rashad/Desktop/rider/Demo2/presentation.mvc/wwwroot/css/Authstyle.css",
+      "SourceId": "presentation.mvc",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/rashad/Desktop/rider/Demo2/presentation.mvc/wwwroot/",
+      "BasePath": "_content/presentation.mvc",
+      "RelativePath": "css/Authstyle.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/Authstyle.css"
     },
     {
       "Identity": "/home/rashad/Desktop/rider/Demo2/presentation.mvc/wwwroot/css/site.css",

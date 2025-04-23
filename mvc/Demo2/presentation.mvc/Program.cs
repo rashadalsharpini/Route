@@ -3,6 +3,8 @@ using BusinessLogic.Services.AttachementService;
 using BusinessLogic.Services.classes;
 using BusinessLogic.Services.Interfaces;
 using Data.Contexts;
+using Data.Models.Identity;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Repos.Interfaces;
@@ -27,6 +29,16 @@ public class Program
         builder.Services.AddScoped<IEmployeeService, EmployeeService>();
         builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
         builder.Services.AddScoped<IAttachementService, AttachementService>();
+
+
+
+        builder.Services.AddIdentity<AppUser, IdentityRole>(opt => opt.User.RequireUniqueEmail = true)
+            .AddEntityFrameworkStores<AppDbContext>()
+            .AddDefaultTokenProviders();
+            
+        
+        
+        
         // builder.Services.AddAutoMapper(typeof(MappingProfiles).Assembly);
         builder.Services.AddAutoMapper(m=>m.AddProfile(new MappingProfiles()));
         builder.Services.AddDbContext<AppDbContext>(options =>
@@ -50,11 +62,12 @@ public class Program
 
         app.UseRouting();
 
+        app.UseAuthentication();
         app.UseAuthorization();
 
         app.MapControllerRoute(
             name: "default",
-            pattern: "{controller=Home}/{action=Index}/{id?}");
+            pattern: "{controller=Account}/{action=Register}/{id?}");
 
         app.Run();
     }

@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets/Files/Images/placeholder.png"
     },
     {
+      "Id": "/home/rashad/Desktop/rider/Demo2/presentation.mvc/wwwroot/css/Authstyle.css",
+      "PackagePath": "staticwebassets/css/Authstyle.css"
+    },
+    {
       "Id": "/home/rashad/Desktop/rider/Demo2/presentation.mvc/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },
