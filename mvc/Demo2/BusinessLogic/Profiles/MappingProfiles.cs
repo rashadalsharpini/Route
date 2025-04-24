@@ -25,7 +25,9 @@ public class MappingProfiles : Profile
         CreateMap<AddEmployee, Employee>()
             .ForMember(dest=>dest.HireDate,
                 opt=>opt.MapFrom(src=>src.HireDate.ToDateTime(new TimeOnly())));
-        CreateMap<UpdateEmployee, Employee>().ForMember(dest=>dest.HireDate,
-            opt=>opt.MapFrom(src=>src.HireDate.ToDateTime(new TimeOnly())));
+        CreateMap<UpdateEmployee, Employee>().ForMember(dest => dest.HireDate,
+            opt => opt.MapFrom(src => src.HireDate.ToDateTime(new TimeOnly())))
+            .ForMember(dest=>dest.ImageName,
+                opt=>opt.Ignore());
     }
 }

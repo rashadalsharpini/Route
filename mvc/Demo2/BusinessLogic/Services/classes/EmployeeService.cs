@@ -41,7 +41,12 @@ public class EmployeeService(IUnitOfWork uow, IMapper mapper,
     
     public int Update(UpdateEmployee entity)
     {
-        uow.EmployeeRepo.Update(mapper.Map<UpdateEmployee, Employee>(entity));
+        var emp = mapper.Map<UpdateEmployee, Employee>(entity);
+        if (entity.Image is not null)
+        {
+            emp.ImageName = attachementService.Upload(entity.Image, "Images");
+        }
+        uow.EmployeeRepo.Update(emp);
         return uow.Save();
     }
 

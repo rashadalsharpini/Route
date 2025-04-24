@@ -79,7 +79,6 @@ public class EmployeeController(IEmployeeService employeeService,ILogger<Departm
         var employee = employeeService.GetById(id.Value);
         if (employee is null) return NotFound();
         var empvm = new EmployeeViewModel() {
-            // Id = employee.Id,
             Name = employee.Name,
             Phone = employee.Phone,
             HireDate = employee.HireDate,
@@ -91,6 +90,7 @@ public class EmployeeController(IEmployeeService employeeService,ILogger<Departm
             IsActive = employee.IsActive,
             Email = employee.Email,
             DepartmentId = employee.DepartmentId,
+            ImagePath = employee.Image,
         };
         return View(empvm);
     }
@@ -115,6 +115,7 @@ public class EmployeeController(IEmployeeService employeeService,ILogger<Departm
                 IsActive = empvm.IsActive,
                 Email = empvm.Email,
                 DepartmentId = empvm.DepartmentId,
+                Image = empvm.Image, // todo
             };
             var res = employeeService.Update(empDto);
             if(res > 0) return RedirectToAction(nameof(Index));

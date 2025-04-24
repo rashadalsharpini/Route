@@ -1,6 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using Data.Models.Employee;
 using Data.Models.Shared.Enums;
+using Microsoft.AspNetCore.Http;
 
 namespace BusinessLogic.DataTransferObjects.EmployeeDtos;
 
@@ -32,4 +33,5 @@ public class UpdateEmployee
     public int CreatedBy { get; set; }
     public int LastModifiedBy { get; set; }
     public int? DepartmentId { get; set; }
+    public IFormFile? Image { get; set; }
 }
