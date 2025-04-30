@@ -1,0 +1,11 @@
+/home/rashad/Desktop/rider/E-Commerce.Web/Core/Domain/bin/Debug/net8.0/Domain.deps.json
+/home/rashad/Desktop/rider/E-Commerce.Web/Core/Domain/bin/Debug/net8.0/Domain.dll
+/home/rashad/Desktop/rider/E-Commerce.Web/Core/Domain/bin/Debug/net8.0/Domain.pdb
+/home/rashad/Desktop/rider/E-Commerce.Web/Core/Domain/obj/Debug/net8.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/rashad/Desktop/rider/E-Commerce.Web/Core/Domain/obj/Debug/net8.0/Domain.AssemblyInfoInputs.cache
+/home/rashad/Desktop/rider/E-Commerce.Web/Core/Domain/obj/Debug/net8.0/Domain.AssemblyInfo.cs
+/home/rashad/Desktop/rider/E-Commerce.Web/Core/Domain/obj/Debug/net8.0/Domain.csproj.CoreCompileInputs.cache
+/home/rashad/Desktop/rider/E-Commerce.Web/Core/Domain/obj/Debug/net8.0/Domain.dll
+/home/rashad/Desktop/rider/E-Commerce.Web/Core/Domain/obj/Debug/net8.0/refint/Domain.dll
+/home/rashad/Desktop/rider/E-Commerce.Web/Core/Domain/obj/Debug/net8.0/Domain.pdb
+/home/rashad/Desktop/rider/E-Commerce.Web/Core/Domain/obj/Debug/net8.0/ref/Domain.dll

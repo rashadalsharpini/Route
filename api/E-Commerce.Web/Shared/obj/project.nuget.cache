@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "LSfb+6uT1cY=",
+  "success": true,
+  "projectFilePath": "/home/rashad/Desktop/rider/E-Commerce.Web/Shared/Shared.csproj",
+  "expectedPackageFiles": [
+    "/home/rashad/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.15/microsoft.aspnetcore.app.ref.8.0.15.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -115,7 +115,7 @@ public class EmployeeController(IEmployeeService employeeService,ILogger<Departm
                 IsActive = empvm.IsActive,
                 Email = empvm.Email,
                 DepartmentId = empvm.DepartmentId,
-                Image = empvm.Image, // todo
+                Image = empvm.Image, 
             };
             var res = employeeService.Update(empDto);
             if(res > 0) return RedirectToAction(nameof(Index));

@@ -1,0 +1,15 @@
+/home/rashad/Desktop/rider/E-Commerce.Web/Core/ServiceAbstraction/bin/Debug/net8.0/ServiceAbstraction.deps.json
+/home/rashad/Desktop/rider/E-Commerce.Web/Core/ServiceAbstraction/bin/Debug/net8.0/ServiceAbstraction.dll
+/home/rashad/Desktop/rider/E-Commerce.Web/Core/ServiceAbstraction/bin/Debug/net8.0/ServiceAbstraction.pdb
+/home/rashad/Desktop/rider/E-Commerce.Web/Core/ServiceAbstraction/obj/Debug/net8.0/ServiceAbstraction.GeneratedMSBuildEditorConfig.editorconfig
+/home/rashad/Desktop/rider/E-Commerce.Web/Core/ServiceAbstraction/obj/Debug/net8.0/ServiceAbstraction.AssemblyInfoInputs.cache
+/home/rashad/Desktop/rider/E-Commerce.Web/Core/ServiceAbstraction/obj/Debug/net8.0/ServiceAbstraction.AssemblyInfo.cs
+/home/rashad/Desktop/rider/E-Commerce.Web/Core/ServiceAbstraction/obj/Debug/net8.0/ServiceAbstraction.csproj.CoreCompileInputs.cache
+/home/rashad/Desktop/rider/E-Commerce.Web/Core/ServiceAbstraction/obj/Debug/net8.0/ServiceAbstraction.dll
+/home/rashad/Desktop/rider/E-Commerce.Web/Core/ServiceAbstraction/obj/Debug/net8.0/refint/ServiceAbstraction.dll
+/home/rashad/Desktop/rider/E-Commerce.Web/Core/ServiceAbstraction/obj/Debug/net8.0/ServiceAbstraction.pdb
+/home/rashad/Desktop/rider/E-Commerce.Web/Core/ServiceAbstraction/obj/Debug/net8.0/ref/ServiceAbstraction.dll
+/home/rashad/Desktop/rider/E-Commerce.Web/Core/ServiceAbstraction/bin/Debug/net8.0/Shared.dll
+/home/rashad/Desktop/rider/E-Commerce.Web/Core/ServiceAbstraction/bin/Debug/net8.0/Shared.pdb
+/home/rashad/Desktop/rider/E-Commerce.Web/Core/ServiceAbstraction/obj/Debug/net8.0/ServiceAbstraction.csproj.AssemblyReference.cache
+/home/rashad/Desktop/rider/E-Commerce.Web/Core/ServiceAbstraction/obj/Debug/net8.0/ServiceAbstraction.csproj.CopyComplete
