@@ -1,17 +1,18 @@
 using Microsoft.AspNetCore.Mvc;
 using ServiceAbstraction;
+using Shared;
 using Shared.DTOs;
 
 namespace Presentation.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class ProductsController(IServiceManager serviceManager):ControllerBase
+public class ProductsController(IServiceManager serviceManager) : ControllerBase
 {
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<ProductDto>>> GetAllProducts()
+    public async Task<ActionResult<PaginatedResult<ProductDto>>> GetAllProducts([FromQuery] ProductQueryParams queryParams)
     {
-        var products = await serviceManager.ProductService.GetAllProductsAsync();
+        var products = await serviceManager.ProductService.GetAllProductsAsync(queryParams);
         return Ok(products);
     }
 
@@ -28,6 +29,7 @@ public class ProductsController(IServiceManager serviceManager):ControllerBase
         var types = await serviceManager.ProductService.GetAllTypesAsync();
         return Ok(types);
     }
+
     [HttpGet("brands")]
     public async Task<ActionResult<IEnumerable<BrandDto>>> GetBrands()
     {

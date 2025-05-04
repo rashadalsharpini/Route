@@ -1,5 +1,3 @@
-using System.Text.Json.Serialization;
-
 namespace Domain.Models;
 
 public class Product : BaseEntity<int>

@@ -1,6 +1,5 @@
 using Domain.Contracts;
 using Domain.Models;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Persistence.Data;
 
 namespace Persistence.Repos;
