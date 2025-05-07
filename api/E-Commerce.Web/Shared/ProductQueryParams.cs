@@ -13,7 +13,7 @@ public class ProductQueryParams
 
     public int PageSize
     {
-        get => _pageSize;
+        get => _pageSize == 0 ? DefaultPageSize : _pageSize;
         set => _pageSize = value > MaxPageSize ? MaxPageSize : value;
     }
 }

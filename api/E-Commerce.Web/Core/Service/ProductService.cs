@@ -1,5 +1,6 @@
 using AutoMapper;
 using Domain.Contracts;
+using Domain.Execptions;
 using Domain.Models;
 using Service.Specifications;
 using ServiceAbstraction;
@@ -39,6 +40,8 @@ public class ProductService(IUnitOfWork uow, IMapper mapper) : IProductService
     {
         var specifications = new ProductWithBrandAndTypeSpecifications(id);
         var product = await uow.GenericRepo<Product, int>().GetByIdAsync(specifications);
+        if (product is null)
+            throw new ProductNotFoundException(id);
         return mapper.Map<Product, ProductDto>(product);
     }
 }
