@@ -1,5 +1,6 @@
 using AutoMapper;
 using Domain.Models;
+using Domain.Models.productModule;
 using Microsoft.Extensions.Configuration;
 using Shared.DTOs;
 

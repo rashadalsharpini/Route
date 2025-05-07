@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Persistence.Data;
 using Persistence.Repos;
+using StackExchange.Redis;
 
 namespace Persistence;
 
@@ -19,6 +20,11 @@ public static class InfrastructureRegistration
 
         services.AddScoped<IDataSeeding, DataSeeding>();
         services.AddScoped<IUnitOfWork, UnitOfWork>();
+        services.AddScoped<IBasketRepo, BasketRepo>();
+        services.AddSingleton<IConnectionMultiplexer>( _ =>
+        {
+            return ConnectionMultiplexer.Connect(configuration.GetConnectionString("RedisConnection"));
+        });
         return services;
     }
 }

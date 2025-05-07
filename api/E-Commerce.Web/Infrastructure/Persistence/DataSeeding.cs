@@ -1,6 +1,7 @@
 using System.Text.Json;
 using Domain.Contracts;
 using Domain.Models;
+using Domain.Models.productModule;
 using Microsoft.EntityFrameworkCore;
 using Persistence.Data;
 
