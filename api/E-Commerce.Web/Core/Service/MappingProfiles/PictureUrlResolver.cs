@@ -1,12 +1,11 @@
 using AutoMapper;
-using Domain.Models;
 using Domain.Models.productModule;
 using Microsoft.Extensions.Configuration;
-using Shared.DTOs;
+using Shared.DTOs.productDto;
 
 namespace Service.MappingProfiles;
 
-internal class PictureUrlResolver(IConfiguration configuration):IValueResolver<Product, ProductDto, string>
+internal class PictureUrlResolver(IConfiguration configuration) : IValueResolver<Product, ProductDto, string>
 {
     public string Resolve(Product source, ProductDto destination, string destMember, ResolutionContext context)
     {

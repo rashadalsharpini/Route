@@ -23,7 +23,7 @@ public static class InfrastructureRegistration
         services.AddScoped<IBasketRepo, BasketRepo>();
         services.AddSingleton<IConnectionMultiplexer>( _ =>
         {
-            return ConnectionMultiplexer.Connect(configuration.GetConnectionString("RedisConnection"));
+            return ConnectionMultiplexer.Connect(configuration.GetConnectionString("RedisConnection")!);
         });
         return services;
     }

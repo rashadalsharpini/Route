@@ -1,5 +1,3 @@
-using Domain.Contracts;
-using E_Commerce.Web.CustomMiddleWares;
 using E_Commerce.Web.Extensions;
 using Persistence;
 using Service;

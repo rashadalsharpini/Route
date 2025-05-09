@@ -7,7 +7,7 @@ public static class ApiResFactory
 {
     public static IActionResult GenerateApiValidationErrorResponse(ActionContext context)
     {
-        var errors = context.ModelState.Where(m => m.Value.Errors.Any())
+        var errors = context.ModelState.Where(m => m.Value!.Errors.Any())
             .Select(m => new ValidationError()
             {
                 Field = m.Key,

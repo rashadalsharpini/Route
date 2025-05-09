@@ -1,5 +1,4 @@
 using Shared;
-using Shared.DTOs;
 using Shared.DTOs.productDto;
 
 namespace ServiceAbstraction;

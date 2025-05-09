@@ -1,12 +1,10 @@
 using AutoMapper;
 using Domain.Contracts;
 using Domain.Execptions;
-using Domain.Models;
 using Domain.Models.productModule;
 using Service.Specifications;
 using ServiceAbstraction;
 using Shared;
-using Shared.DTOs;
 using Shared.DTOs.productDto;
 
 namespace Service;
