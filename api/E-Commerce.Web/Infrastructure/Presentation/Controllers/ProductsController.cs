@@ -5,9 +5,7 @@ using Shared.DTOs.productDto;
 
 namespace Presentation.Controllers;
 
-[ApiController]
-[Route("api/[controller]")]
-public class ProductsController(IServiceManager serviceManager) : ControllerBase
+public class ProductsController(IServiceManager serviceManager) : ApiBaseController
 {
     [HttpGet]
     public async Task<ActionResult<PaginatedResult<ProductDto>>> GetAllProducts([FromQuery] ProductQueryParams queryParams)

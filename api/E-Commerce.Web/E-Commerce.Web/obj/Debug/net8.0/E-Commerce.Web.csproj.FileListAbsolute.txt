@@ -157,3 +157,8 @@
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/E-Commerce.Web.staticwebassets.runtime.json
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/Pipelines.Sockets.Unofficial.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/StackExchange.Redis.dll
+/home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+/home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+/home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+/home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/Microsoft.Extensions.Identity.Core.dll
+/home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/Microsoft.Extensions.Identity.Stores.dll

@@ -5,11 +5,13 @@ namespace E_Commerce.Web.Extensions;
 
 public static class WebAppRegistration
 {
-    public static async Task SeedDataAsync(this WebApplication app)
+    public static async Task<WebApplication> SeedDataAsync(this WebApplication app)
     {
         using var scoope = app.Services.CreateScope();
         var objectDataSeeding = scoope.ServiceProvider.GetRequiredService<IDataSeeding>();
         await objectDataSeeding.DataSeedAsync();
+        await objectDataSeeding.IdentityDataSeedAsync();
+        return app;
     }
 
     public static IApplicationBuilder useCustomExpectionMiddleWare(this IApplicationBuilder app)

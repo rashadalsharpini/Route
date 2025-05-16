@@ -17,8 +17,6 @@
 /home/rashad/Desktop/rider/E-Commerce.Web/Core/Service/obj/Debug/net8.0/ref/Service.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/Core/Service/bin/Debug/net8.0/Shared.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/Core/Service/bin/Debug/net8.0/Shared.pdb
-/home/rashad/Desktop/rider/E-Commerce.Web/Core/Service/bin/Debug/net8.0/Microsoft.Extensions.Configuration.Abstractions.dll
-/home/rashad/Desktop/rider/E-Commerce.Web/Core/Service/bin/Debug/net8.0/Microsoft.Extensions.Configuration.Abstractions.xml
 /home/rashad/Desktop/rider/E-Commerce.Web/Core/Service/bin/Debug/net8.0/Microsoft.AspNetCore.Mvc.Abstractions.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/Core/Service/bin/Debug/net8.0/Microsoft.AspNetCore.Mvc.Core.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/Core/Service/bin/Debug/net8.0/Microsoft.AspNetCore.Http.Abstractions.dll
@@ -28,7 +26,6 @@
 /home/rashad/Desktop/rider/E-Commerce.Web/Core/Service/bin/Debug/net8.0/Microsoft.AspNetCore.Http.Features.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/Core/Service/bin/Debug/net8.0/Microsoft.Net.Http.Headers.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/Core/Service/bin/Debug/net8.0/Microsoft.AspNetCore.Http.Extensions.dll
-/home/rashad/Desktop/rider/E-Commerce.Web/Core/Service/bin/Debug/net8.0/Microsoft.Extensions.Logging.Abstractions.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/Core/Service/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.Abstractions.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/Core/Service/bin/Debug/net8.0/Microsoft.AspNetCore.Http.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/Core/Service/bin/Debug/net8.0/Microsoft.Extensions.FileProviders.Abstractions.dll
@@ -52,7 +49,6 @@
 /home/rashad/Desktop/rider/E-Commerce.Web/Core/Service/bin/Debug/net8.0/Microsoft.AspNetCore.Http.Features.xml
 /home/rashad/Desktop/rider/E-Commerce.Web/Core/Service/bin/Debug/net8.0/Microsoft.Net.Http.Headers.xml
 /home/rashad/Desktop/rider/E-Commerce.Web/Core/Service/bin/Debug/net8.0/Microsoft.AspNetCore.Http.Extensions.xml
-/home/rashad/Desktop/rider/E-Commerce.Web/Core/Service/bin/Debug/net8.0/Microsoft.Extensions.Logging.Abstractions.xml
 /home/rashad/Desktop/rider/E-Commerce.Web/Core/Service/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.Abstractions.xml
 /home/rashad/Desktop/rider/E-Commerce.Web/Core/Service/bin/Debug/net8.0/Microsoft.AspNetCore.Http.xml
 /home/rashad/Desktop/rider/E-Commerce.Web/Core/Service/bin/Debug/net8.0/Microsoft.Extensions.FileProviders.Abstractions.xml

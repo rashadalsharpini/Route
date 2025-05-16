@@ -9,3 +9,4 @@
 /home/rashad/Desktop/rider/E-Commerce.Web/Core/Domain/obj/Debug/net8.0/refint/Domain.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/Core/Domain/obj/Debug/net8.0/Domain.pdb
 /home/rashad/Desktop/rider/E-Commerce.Web/Core/Domain/obj/Debug/net8.0/ref/Domain.dll
+/home/rashad/Desktop/rider/E-Commerce.Web/Core/Domain/obj/Debug/net8.0/Domain.csproj.AssemblyReference.cache

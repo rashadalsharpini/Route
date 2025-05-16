@@ -1,8 +1,11 @@
 using Domain.Contracts;
+using Domain.Models.IdentityModel;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Persistence.Data;
+using Persistence.Identity;
 using Persistence.Repos;
 using StackExchange.Redis;
 
@@ -12,7 +15,6 @@ public static class InfrastructureRegistration
 {
     public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
-        
         services.AddDbContext<StoreDbContext>(opt =>
         {
             opt.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
@@ -21,10 +23,16 @@ public static class InfrastructureRegistration
         services.AddScoped<IDataSeeding, DataSeeding>();
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         services.AddScoped<IBasketRepo, BasketRepo>();
-        services.AddSingleton<IConnectionMultiplexer>( _ =>
+        services.AddSingleton<IConnectionMultiplexer>(_ =>
+            ConnectionMultiplexer.Connect(configuration.GetConnectionString("RedisConnection")!));
+
+        services.AddDbContext<StoreIdentityDbContext>(opt =>
         {
-            return ConnectionMultiplexer.Connect(configuration.GetConnectionString("RedisConnection")!);
+            opt.UseSqlServer(configuration.GetConnectionString("IdentityConnection"));
         });
+        services.AddIdentityCore<AppUser>()
+            .AddRoles<IdentityRole>()
+            .AddEntityFrameworkStores<StoreIdentityDbContext>();
         return services;
     }
 }
