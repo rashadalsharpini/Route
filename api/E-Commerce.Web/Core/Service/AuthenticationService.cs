@@ -1,12 +1,18 @@
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 using Domain.Execptions;
 using Domain.Models.IdentityModel;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
 using ServiceAbstraction;
 using Shared.DTOs.IdentityDtos;
 
 namespace Service;
 
-public class AuthenticationService(UserManager<AppUser> userManager) : IAuthenticationService
+public class AuthenticationService(UserManager<AppUser> userManager, IConfiguration conf) : IAuthenticationService
 {
     public async Task<UserDto> LoginAsync(LoginDto dto)
     {
@@ -17,7 +23,7 @@ public class AuthenticationService(UserManager<AppUser> userManager) : IAuthenti
             {
                 DisplayName = User.DisplayName,
                 Email = User.Email,
-                Token = GenerateToken(User),
+                Token = await GenerateToken(User),
             };
         throw new UnauthorizedException();
     }
@@ -37,15 +43,33 @@ public class AuthenticationService(UserManager<AppUser> userManager) : IAuthenti
             {
                 DisplayName = User.DisplayName,
                 Email = User.Email,
-                Token = GenerateToken(User),
+                Token = await GenerateToken(User),
             };
-        var errors = res.Errors.Select(e => e.Description); 
+        var errors = res.Errors.Select(e => e.Description);
         throw new BadRequestException(errors);
     }
 
-    private static string GenerateToken(AppUser user)
+    private async Task<string> GenerateToken(AppUser user)
     {
-        // todo
-        return "some shit";
+        var claims = new List<Claim>()
+        {
+            new Claim(ClaimTypes.Email, user.Email!),
+            new Claim(ClaimTypes.Name, user.UserName!),
+            new Claim(ClaimTypes.NameIdentifier, user.Id!),
+        };
+        var roles = await userManager.GetRolesAsync(user);
+        foreach (var role in roles)
+            claims.Add(new Claim(ClaimTypes.Role, role));
+        var secretKey = conf.GetSection("JWTOptions")["SecretKey"];  
+        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey));
+        var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+        var token =  new JwtSecurityToken(
+            issuer: conf["JWTOptions:Issuer"],
+            audience: conf.GetSection("JWTOptions")["Audience"],
+            claims: claims,
+            expires: DateTime.Now.AddHours(1),
+            signingCredentials: creds
+        );
+        return new JwtSecurityTokenHandler().WriteToken(token);
     }
 }
