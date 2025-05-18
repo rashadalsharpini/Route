@@ -63,7 +63,9 @@ public class DataSeeding(
     {
         try
         {
-
+            var pendingMigrations = await identityDb.Database.GetPendingMigrationsAsync();
+            if (pendingMigrations.Any())
+                await identityDb.Database.MigrateAsync();
             if (!roleManager.Roles.Any())
             {
                 await roleManager.CreateAsync(new IdentityRole("Admin"));
