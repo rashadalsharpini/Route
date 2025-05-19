@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ServiceAbstraction;
 using Shared;
@@ -7,6 +8,7 @@ namespace Presentation.Controllers;
 
 public class ProductsController(IServiceManager serviceManager) : ApiBaseController
 {
+    [Authorize(Roles = "Admin")]
     [HttpGet]
     public async Task<ActionResult<PaginatedResult<ProductDto>>> GetAllProducts([FromQuery] ProductQueryParams queryParams)
     {

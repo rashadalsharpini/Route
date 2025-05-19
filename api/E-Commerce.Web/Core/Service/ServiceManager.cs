@@ -19,7 +19,7 @@ public class ServiceManager(
     private readonly Lazy<IBasketService> _lazyBasketService = new(() => new BasketService(basketRepo, mapper));
 
     private readonly Lazy<IAuthenticationService> _lazyAuthenticationService =
-        new(() => new AuthenticationService(userManager, conf));
+        new(() => new AuthenticationService(userManager, conf, mapper));
 
     public IProductService ProductService => _lazyProductService.Value;
     public IBasketService BasketService => _lazyBasketService.Value;

@@ -5,7 +5,6 @@ using Domain.Models.productModule;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using Microsoft.Identity.Client;
 using Persistence.Data;
 using Persistence.Identity;
 

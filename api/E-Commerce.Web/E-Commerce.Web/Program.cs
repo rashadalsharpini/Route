@@ -19,6 +19,7 @@ public class Program
         builder.Services.AddInfrastructure(builder.Configuration);
         builder.Services.AddAppServices();
         builder.Services.AddWebAppServices();
+        builder.Services.AddJWTService(builder.Configuration);
         
         var app = builder.Build();
 
@@ -36,8 +37,9 @@ public class Program
         app.UseHttpsRedirection();
         app.UseStaticFiles();
 
-
-
+        app.UseRouting();
+        app.UseAuthentication();
+        app.UseAuthorization();
         app.MapControllers();
 
         app.Run();
