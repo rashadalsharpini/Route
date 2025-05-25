@@ -20,6 +20,7 @@ public class AuthenticationController(IServiceManager serviceManager) : ApiBaseC
     public async Task<ActionResult<bool>> CheckEmail(string email)
         => Ok(await serviceManager.AuthenticationService.CheckEmailAsync(email));
 
+    
     [Authorize]
     [HttpGet("CurrentUser")]
     public async Task<ActionResult<UserDto>> GetCurrentUser()
@@ -28,6 +29,7 @@ public class AuthenticationController(IServiceManager serviceManager) : ApiBaseC
         return Ok(await serviceManager.AuthenticationService.GetCurrentUserAsync(email!));
     }
 
+    
     [Authorize]
     [HttpGet("Address")]
     public async Task<ActionResult<AddressDto>> GetCurrentUserAddress()
@@ -36,6 +38,7 @@ public class AuthenticationController(IServiceManager serviceManager) : ApiBaseC
         return Ok(await serviceManager.AuthenticationService.GetCurrentUserAddressAsync(email!));
     }
 
+    
     [Authorize]
     [HttpPut("Address")]
     public async Task<ActionResult<AddressDto>> UpdateCurrentUserAddress(AddressDto dto)
