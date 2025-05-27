@@ -21,7 +21,10 @@ public class ServiceManager(
     private readonly Lazy<IAuthenticationService> _lazyAuthenticationService =
         new(() => new AuthenticationService(userManager, conf, mapper));
 
+    private readonly Lazy<IOrderService> _lazyOrderService = new(() => new OrderService(mapper, basketRepo, uow));
+
     public IProductService ProductService => _lazyProductService.Value;
     public IBasketService BasketService => _lazyBasketService.Value;
     public IAuthenticationService AuthenticationService => _lazyAuthenticationService.Value;
+    public IOrderService OrderService => _lazyOrderService.Value;
 }

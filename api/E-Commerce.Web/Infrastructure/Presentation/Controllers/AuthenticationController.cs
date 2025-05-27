@@ -1,4 +1,3 @@
-using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ServiceAbstraction;
@@ -25,8 +24,7 @@ public class AuthenticationController(IServiceManager serviceManager) : ApiBaseC
     [HttpGet("CurrentUser")]
     public async Task<ActionResult<UserDto>> GetCurrentUser()
     {
-        var email = User.FindFirstValue(ClaimTypes.Email);
-        return Ok(await serviceManager.AuthenticationService.GetCurrentUserAsync(email!));
+        return Ok(await serviceManager.AuthenticationService.GetCurrentUserAsync(GetEmailFromToken()));
     }
 
     
@@ -34,8 +32,7 @@ public class AuthenticationController(IServiceManager serviceManager) : ApiBaseC
     [HttpGet("Address")]
     public async Task<ActionResult<AddressDto>> GetCurrentUserAddress()
     {
-        var email = User.FindFirstValue(ClaimTypes.Email);
-        return Ok(await serviceManager.AuthenticationService.GetCurrentUserAddressAsync(email!));
+        return Ok(await serviceManager.AuthenticationService.GetCurrentUserAddressAsync(GetEmailFromToken()));
     }
 
     
@@ -43,7 +40,6 @@ public class AuthenticationController(IServiceManager serviceManager) : ApiBaseC
     [HttpPut("Address")]
     public async Task<ActionResult<AddressDto>> UpdateCurrentUserAddress(AddressDto dto)
     {
-        var email = User.FindFirstValue(ClaimTypes.Email);
-        return Ok(await serviceManager.AuthenticationService.UpdateCurrentUserAddressAsync(email!, dto));
+        return Ok(await serviceManager.AuthenticationService.UpdateCurrentUserAddressAsync(GetEmailFromToken(), dto));
     }
 }

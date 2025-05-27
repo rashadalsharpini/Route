@@ -17,7 +17,7 @@ internal class DeliveryMethodConf:IEntityTypeConfiguration<DeliveryMethod>
         builder.Property(d => d.Description)
             .HasColumnType("varchar")
             .HasMaxLength(100);
-        builder.Property(d => d.DeliverTime)
+        builder.Property(d => d.DeliveryTime)
             .HasColumnType("varchar")
             .HasMaxLength(50);
     }
