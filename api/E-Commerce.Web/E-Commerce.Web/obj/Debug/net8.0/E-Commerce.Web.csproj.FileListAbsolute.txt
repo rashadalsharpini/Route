@@ -145,7 +145,6 @@
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.E-Commerce.Web.props
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/obj/Debug/net8.0/staticwebassets.pack.json
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/obj/Debug/net8.0/scopedcss/bundle/E-Commerce.Web.styles.css
-/home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/obj/Debug/net8.0/E-Commerce.Web.csproj.CopyComplete
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/obj/Debug/net8.0/E-Commerce.Web.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/obj/Debug/net8.0/refint/E-Commerce.Web.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/obj/Debug/net8.0/E-Commerce.Web.pdb
@@ -163,3 +162,4 @@
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/Microsoft.Extensions.Identity.Core.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/Microsoft.Extensions.Identity.Stores.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/obj/Debug/net8.0/E-Commerce.Web.csproj.CopyComplete

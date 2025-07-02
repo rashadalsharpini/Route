@@ -30,7 +30,7 @@ namespace Persistence.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("DeliverTime")
+                    b.Property<string>("DeliveryTime")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("varchar");

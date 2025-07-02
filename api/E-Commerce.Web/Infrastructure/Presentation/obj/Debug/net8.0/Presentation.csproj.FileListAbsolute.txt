@@ -8,10 +8,10 @@
 /home/rashad/Desktop/rider/E-Commerce.Web/Infrastructure/Presentation/obj/Debug/net8.0/Presentation.AssemblyInfoInputs.cache
 /home/rashad/Desktop/rider/E-Commerce.Web/Infrastructure/Presentation/obj/Debug/net8.0/Presentation.AssemblyInfo.cs
 /home/rashad/Desktop/rider/E-Commerce.Web/Infrastructure/Presentation/obj/Debug/net8.0/Presentation.csproj.CoreCompileInputs.cache
-/home/rashad/Desktop/rider/E-Commerce.Web/Infrastructure/Presentation/obj/Debug/net8.0/Presentation.csproj.CopyComplete
 /home/rashad/Desktop/rider/E-Commerce.Web/Infrastructure/Presentation/obj/Debug/net8.0/Presentation.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/Infrastructure/Presentation/obj/Debug/net8.0/refint/Presentation.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/Infrastructure/Presentation/obj/Debug/net8.0/Presentation.pdb
 /home/rashad/Desktop/rider/E-Commerce.Web/Infrastructure/Presentation/obj/Debug/net8.0/ref/Presentation.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/Infrastructure/Presentation/bin/Debug/net8.0/Shared.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/Infrastructure/Presentation/bin/Debug/net8.0/Shared.pdb
+/home/rashad/Desktop/rider/E-Commerce.Web/Infrastructure/Presentation/obj/Debug/net8.0/Presentation.csproj.CopyComplete

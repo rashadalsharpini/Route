@@ -16,4 +16,9 @@
       <ProjectReference Include="..\..\Core\Service\Service.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Migrations.Identity\" />
+      <Folder Include="Migrations\" />
+    </ItemGroup>
+
 </Project>

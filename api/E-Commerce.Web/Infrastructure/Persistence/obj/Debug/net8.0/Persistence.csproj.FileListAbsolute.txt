@@ -12,10 +12,10 @@
 /home/rashad/Desktop/rider/E-Commerce.Web/Infrastructure/Persistence/obj/Debug/net8.0/Persistence.AssemblyInfoInputs.cache
 /home/rashad/Desktop/rider/E-Commerce.Web/Infrastructure/Persistence/obj/Debug/net8.0/Persistence.AssemblyInfo.cs
 /home/rashad/Desktop/rider/E-Commerce.Web/Infrastructure/Persistence/obj/Debug/net8.0/Persistence.csproj.CoreCompileInputs.cache
-/home/rashad/Desktop/rider/E-Commerce.Web/Infrastructure/Persistence/obj/Debug/net8.0/Persistence.csproj.CopyComplete
 /home/rashad/Desktop/rider/E-Commerce.Web/Infrastructure/Persistence/obj/Debug/net8.0/Persistence.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/Infrastructure/Persistence/obj/Debug/net8.0/refint/Persistence.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/Infrastructure/Persistence/obj/Debug/net8.0/Persistence.pdb
 /home/rashad/Desktop/rider/E-Commerce.Web/Infrastructure/Persistence/obj/Debug/net8.0/ref/Persistence.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/Infrastructure/Persistence/bin/Debug/net8.0/Shared.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/Infrastructure/Persistence/bin/Debug/net8.0/Shared.pdb
+/home/rashad/Desktop/rider/E-Commerce.Web/Infrastructure/Persistence/obj/Debug/net8.0/Persistence.csproj.CopyComplete

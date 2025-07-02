@@ -1,5 +1,6 @@
 using Domain.Contracts;
 using Domain.Models.IdentityModel;
+using Microsoft.AspNetCore.DataProtection.KeyManagement.Internal;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -23,6 +24,7 @@ public static class InfrastructureRegistration
         services.AddScoped<IDataSeeding, DataSeeding>();
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         services.AddScoped<IBasketRepo, BasketRepo>();
+        services.AddScoped<ICacheRepo, CacheRepo>();
         services.AddSingleton<IConnectionMultiplexer>(_ =>
             ConnectionMultiplexer.Connect(configuration.GetConnectionString("RedisConnection")!));
 
