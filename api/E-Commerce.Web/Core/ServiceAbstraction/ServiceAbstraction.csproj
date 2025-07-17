@@ -10,4 +10,8 @@
       <ProjectReference Include="..\..\Shared\Shared.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Stripe.net" Version="48.3.0" />
+    </ItemGroup>
+
 </Project>

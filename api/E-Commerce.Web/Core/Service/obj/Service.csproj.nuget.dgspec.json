@@ -41,6 +41,10 @@
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.15, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[48.3.0, )"
             }
           },
           "imports": [
@@ -117,6 +121,10 @@
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.16, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[48.3.0, )"
             }
           },
           "imports": [
@@ -182,6 +190,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[48.3.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -241,6 +255,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[48.3.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

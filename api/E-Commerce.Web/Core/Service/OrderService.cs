@@ -14,9 +14,14 @@ public class OrderService(IMapper map, IBasketRepo basketRepo, IUnitOfWork uow) 
 {
     public async Task<OrderToReturnDto> CreateOrderAsync(OrderDto orderDto, string email)
     {
-        var orderAddress = map.Map<AddressDto, OrderAddress>(orderDto.Address);
+        var orderAddress = map.Map<AddressDto, OrderAddress>(orderDto.shipToAddress);
         var basket = await basketRepo.GetBasketAsync(orderDto.BasketId) ??
                      throw new BasketNotFoundException("Basket not found");
+        ArgumentNullException.ThrowIfNull(basket.paymentIntentId);
+        var orderRepo = uow.GenericRepo<Order, Guid>();
+        var orderSpec = new OrderWithPaymentIntentIdSpecifications(basket.paymentIntentId);
+        var ExistingOrder = await orderRepo.GetByIdAsync(orderSpec);
+        if (ExistingOrder is not null) orderRepo.Remove(ExistingOrder);
         List<OrderItem> orderItems = [];
         var productRepo = uow.GenericRepo<Product, int>();
         foreach (var i in basket.Items)
@@ -39,8 +44,8 @@ public class OrderService(IMapper map, IBasketRepo basketRepo, IUnitOfWork uow) 
         var deliverMethod = await uow.GenericRepo<DeliveryMethod, int>().GetByIdAsync(orderDto.DeliveryMethodId) ??
                             throw new DeliveryMethodNotFound(orderDto.DeliveryMethodId);
         var subTotal = orderItems.Sum(i => i.Price * i.Quantity);
-        var order = new Order(email, orderAddress, deliverMethod, orderItems, subTotal);
-        await uow.GenericRepo<Order, Guid>().AddAsync(order);
+        var order = new Order(email, orderAddress, deliverMethod, orderItems, subTotal, basket.paymentIntentId);
+        await orderRepo.AddAsync(order);
         await uow.SaveChangesAsync();
         return map.Map<Order, OrderToReturnDto>(order);
     }

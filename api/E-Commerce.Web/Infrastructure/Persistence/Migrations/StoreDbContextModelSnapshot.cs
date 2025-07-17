@@ -30,6 +30,9 @@ namespace Persistence.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<decimal>("Cost")
+                        .HasColumnType("decimal(8,2)");
+
                     b.Property<string>("DeliveryTime")
                         .IsRequired()
                         .HasMaxLength(50)
@@ -39,9 +42,6 @@ namespace Persistence.Migrations
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("varchar");
-
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(8,2)");
 
                     b.Property<string>("ShortName")
                         .IsRequired()
@@ -59,21 +59,25 @@ namespace Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("BuyerEmail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("DeliveryMethodId")
                         .HasColumnType("int");
 
                     b.Property<DateTimeOffset>("OrderDate")
                         .HasColumnType("datetimeoffset");
 
-                    b.Property<int>("OrderStatus")
+                    b.Property<string>("PaymentIntentId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Status")
                         .HasColumnType("int");
 
                     b.Property<decimal>("SubTotal")
                         .HasColumnType("decimal(8,2)");
-
-                    b.Property<string>("UserEmail")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -186,7 +190,7 @@ namespace Persistence.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.OwnsOne("Domain.Models.OrderModel.OrderAddress", "Address", b1 =>
+                    b.OwnsOne("Domain.Models.OrderModel.OrderAddress", "ShipToAddress", b1 =>
                         {
                             b1.Property<Guid>("OrderId")
                                 .HasColumnType("uniqueidentifier");
@@ -219,17 +223,18 @@ namespace Persistence.Migrations
                                 .HasForeignKey("OrderId");
                         });
 
-                    b.Navigation("Address")
-                        .IsRequired();
-
                     b.Navigation("DeliveryMethod");
+
+                    b.Navigation("ShipToAddress")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Domain.Models.OrderModel.OrderItem", b =>
                 {
                     b.HasOne("Domain.Models.OrderModel.Order", null)
                         .WithMany("Items")
-                        .HasForeignKey("OrderId");
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.OwnsOne("Domain.Models.OrderModel.ProductItemOrder", "Product", b1 =>
                         {

@@ -23,6 +23,10 @@ public static class AppServiceRegistration
             ()=> provider.GetRequiredService<IBasketService>());
         
         services.AddScoped<ICacheService, CacheService>();
+        
+        services.AddScoped<IPaymentService, PaymentServicea>();
+        services.AddScoped<Func<IPaymentService>>(provider=>
+            ()=> provider.GetRequiredService<IPaymentService>());
         return services;
     }
 }

@@ -9,3 +9,4 @@
 /home/rashad/Desktop/rider/E-Commerce.Web/Shared/obj/Debug/net8.0/refint/Shared.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/Shared/obj/Debug/net8.0/Shared.pdb
 /home/rashad/Desktop/rider/E-Commerce.Web/Shared/obj/Debug/net8.0/ref/Shared.dll
+/home/rashad/Desktop/rider/E-Commerce.Web/Shared/obj/Debug/net8.0/Shared.csproj.AssemblyReference.cache

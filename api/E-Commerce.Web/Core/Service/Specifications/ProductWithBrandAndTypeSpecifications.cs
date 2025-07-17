@@ -9,12 +9,12 @@ class ProductWithBrandAndTypeSpecifications : BaseSpecifications<Product, int>
     public ProductWithBrandAndTypeSpecifications(ProductQueryParams queryParams) :
         base(p => (!queryParams.BrandId.HasValue || p.BrandId == queryParams.BrandId) &&
                   (!queryParams.TypeId.HasValue || p.TypeId == queryParams.TypeId) &&
-                  (string.IsNullOrWhiteSpace(queryParams.SearchValue) ||
-                   p.Name.ToLower().Contains(queryParams.SearchValue.ToLower())))
+                  (string.IsNullOrWhiteSpace(queryParams.search) ||
+                   p.Name.ToLower().Contains(queryParams.search.ToLower())))
     {
         AddInclude(p => p.ProductBrand);
         AddInclude(p => p.ProductType);
-        switch (queryParams.SortingOptions)
+        switch (queryParams.sort)
         {
             case ProductSortingOptions.NameAsc:
                 AddOrderBy(p => p.Name);
@@ -32,7 +32,7 @@ class ProductWithBrandAndTypeSpecifications : BaseSpecifications<Product, int>
                 break;
         }
 
-        ApplyPagination(queryParams.PageSize, queryParams.PageIndex);
+        ApplyPagination(queryParams.PageSize, queryParams.pageNumber);
     }
 
     // get by id

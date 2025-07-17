@@ -36,7 +36,6 @@
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/Microsoft.OpenApi.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/Microsoft.SqlServer.Server.dll
-/home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/Microsoft.Win32.SystemEvents.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/Mono.TextTemplating.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
@@ -49,13 +48,10 @@
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/System.Composition.Runtime.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/System.Composition.TypedParts.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/System.Configuration.ConfigurationManager.dll
-/home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/System.Drawing.Common.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/System.Memory.Data.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/System.Runtime.Caching.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/System.Security.Cryptography.ProtectedData.dll
-/home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/System.Security.Permissions.dll
-/home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/System.Windows.Extensions.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/cs/Microsoft.CodeAnalysis.resources.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/de/Microsoft.CodeAnalysis.resources.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/es/Microsoft.CodeAnalysis.resources.dll
@@ -114,12 +110,7 @@
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll
-/home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
-/home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
-/home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Runtime.Caching.dll
-/home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
-/home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/Domain.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/Persistence.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/Presentation.dll
@@ -163,3 +154,5 @@
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/Microsoft.Extensions.Identity.Stores.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
 /home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/obj/Debug/net8.0/E-Commerce.Web.csproj.CopyComplete
+/home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/Newtonsoft.Json.dll
+/home/rashad/Desktop/rider/E-Commerce.Web/E-Commerce.Web/bin/Debug/net8.0/Stripe.net.dll

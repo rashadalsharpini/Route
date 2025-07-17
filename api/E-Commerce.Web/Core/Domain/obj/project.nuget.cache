@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8Y+g9a7Ps2Q=",
+  "dgSpecHash": "/89gnrD436Q=",
   "success": true,
   "projectFilePath": "/home/rashad/Desktop/rider/E-Commerce.Web/Core/Domain/Domain.csproj",
   "expectedPackageFiles": [
@@ -22,6 +22,11 @@
     "/home/rashad/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.2/microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",
     "/home/rashad/.nuget/packages/microsoft.extensions.options/8.0.2/microsoft.extensions.options.8.0.2.nupkg.sha512",
     "/home/rashad/.nuget/packages/microsoft.extensions.primitives/8.0.0/microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "/home/rashad/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
+    "/home/rashad/.nuget/packages/stripe.net/48.3.0/stripe.net.48.3.0.nupkg.sha512",
+    "/home/rashad/.nuget/packages/system.configuration.configurationmanager/8.0.0/system.configuration.configurationmanager.8.0.0.nupkg.sha512",
+    "/home/rashad/.nuget/packages/system.diagnostics.eventlog/8.0.0/system.diagnostics.eventlog.8.0.0.nupkg.sha512",
+    "/home/rashad/.nuget/packages/system.security.cryptography.protecteddata/8.0.0/system.security.cryptography.protecteddata.8.0.0.nupkg.sha512",
     "/home/rashad/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.15/microsoft.aspnetcore.app.ref.8.0.15.nupkg.sha512"
   ],
   "logs": []

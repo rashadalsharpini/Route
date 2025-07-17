@@ -5,7 +5,7 @@ namespace Service.Specifications;
 
 class OrderSpecifications:BaseSpecifications<Order, Guid>
 {
-    public OrderSpecifications(string email) : base(o => o.UserEmail == email)
+    public OrderSpecifications(string email) : base(o => o.BuyerEmail == email)
     {
         AddInclude(o=>o.DeliveryMethod);
         AddInclude(o=>o.Items);

@@ -13,8 +13,8 @@ public class OrderProfile : Profile
         CreateMap<Order, OrderToReturnDto>()
             .ForMember(d => d.DeliveryMethod, opt => opt.MapFrom(src => src.DeliveryMethod.ShortName))
             .ForMember(d => d.OrderItems, opt => opt.MapFrom(src => src.Items))
-            .ForMember(d => d.OrderStatus, opt => opt.MapFrom(src => src.OrderStatus.ToString()))
-            .ForMember(d => d.Address, opt => opt.MapFrom(src => src.Address));
+            .ForMember(d => d.Status, opt => opt.MapFrom(src => src.Status.ToString()))
+            .ForMember(d => d.shipToAddress, opt => opt.MapFrom(src => src.ShipToAddress));
         // CreateMap<Order, OrderToReturnDto>()
         //     .ForMember(d => d.DeliveryMethod, opt => opt.MapFrom(d => d.DeliveryMethod.ShortName));
         CreateMap<OrderItem, OrderItemDto>()

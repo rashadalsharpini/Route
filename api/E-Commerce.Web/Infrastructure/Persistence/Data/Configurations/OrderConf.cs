@@ -12,10 +12,11 @@ internal class OrderConf:IEntityTypeConfiguration<Order>
         builder.Property(o => o.SubTotal)
             .HasColumnType("decimal(8,2)");
         builder.HasMany(o => o.Items)
-            .WithOne();
+            .WithOne()
+            .OnDelete(deleteBehavior: DeleteBehavior.Cascade);
         builder.HasOne(o => o.DeliveryMethod)
             .WithMany()
             .HasForeignKey(o => o.DeliveryMethodId);
-        builder.OwnsOne(o => o.Address);
+        builder.OwnsOne(o => o.ShipToAddress);
     }
 }
